@@ -1,0 +1,94 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+</style>
+
+<% layout("/layouts/boiler") %>
+
+<style>
+    .taxinfo{
+        display: none;
+    }
+
+    .tax-toggle{
+        border: 1px solid black;
+        border-radius: 1rem;
+        height: 3.25rem;
+        padding: 1rem;
+        margin-left: 30rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-container {
+        display: flex;
+        align-items: center; /* Vertically center the items */
+    }
+    .text-content {
+        margin-right: 20px; /* Adjust as needed */
+        margin-top: 10px;
+    }
+    .header{
+        font-size: 4.5rem;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+
+</style>
+
+<span class="flex-container">
+    <span class="text-content">
+        <h1 class="header mt-2">StayEase</h1>
+        
+    </span>
+    <p class = "tagline mt-5"><i><b>Your Journey Begins with Us...</b></i></p>
+    <div class="tax-toggle">
+        <div class="form-check-reverse form-switch">
+            <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+        </div>
+    </div>
+</span>
+
+
+    <div class="row row-cols-lg-3 row row-cols-md-2 row row-cols-sm-3 mt-3">
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%= listing._id%>" class = "listing-link">
+            <div class="card col listing-card">
+                <img class="card-img-top" src="<%= listing.image.url %>" alt = "listing_image" style="height: 18rem">
+                <div class = "card-img-overlay"></div>
+                <div class="card-body">
+                <p class="card-text">
+                   <b> <%= listing.title %> </b> <br>
+                    &#x20B9 <%= listing.price.toLocaleString("en-IN") %> / night
+                    <i class="taxinfo"> &nbsp; &nbsp; +18% GST</i>
+                </p>
+                </div>
+            </div>
+            </a>
+        
+        <% } %>
+    </div>
+
+    <script>
+        let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+        taxSwitch.addEventListener("click", ()=>{
+            let taxInfo = document.getElementsByClassName("taxinfo");
+            for(info of taxInfo){
+                if(info.style.display != "inline") info.style.display = "inline";
+                else{
+                    info.style.display = "none";
+                }
+                
+            }
+        })
+    </script>
+

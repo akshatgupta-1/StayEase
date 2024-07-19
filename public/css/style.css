@@ -1,0 +1,217 @@
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: black;
+}
+
+.container{
+    flex : 1;
+}
+
+.navbar{
+    height : 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color : red;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.nav-link{
+    color : #222 !important;
+
+}
+
+.add-btn{
+    background-color: red !important;
+    border : none !important;
+}
+
+.edit-btn{
+    background-color: red !important;
+    border : none !important;
+}
+
+
+/* footer */
+
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 0.8rem;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+
+/* cards */
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2 rem;
+}
+
+.listing-card{
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.card-img-overlay:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem; */
+  
+}
+
+
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.tittle h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#listing_image {
+    height: 52vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1.7vh;
+    margin-bottom: 10px;
+}
+
+#listing_image img {
+    height: 100%;
+    width: 70%;
+    object-position: center;
+}
+
+.card-body{
+    padding: 0 1.7vh !important;
+    color: black;
+}
+
+.card-text p {
+    font-weight: 400;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.map-tittle {
+    display: flex;
+    align-items: center;
+}
+
+.map-tittle i {
+    color: #000000;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+/* Card Effect */
+ .card-img-overlay{
+    opacity : 0;
+  /* transition: box-shadow 0.3s ease-in-out;
+  border-radius: 1rem; */
+}
+
+.card-img-overlay:hover{
+    opacity : 0.2;
+    background-color: white;
+  }
+
+
+/* Show page */
+
+.show-img{
+    height: 30vh;
+}
+
+
+/* btns */
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#map { 
+    height: 400px;
+    width: 90vh;
+
+ }
+
+ .header{
+    color: red;
+    
+ }
+
+ 
+
+
+
+.custom-navbar {
+    font-size: 1.25rem; /* Increase font size */
+    padding: 1rem 1.5rem; /* Increase padding */
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.5rem; /* Increase brand font size */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+   /* // margin-left: 10px; Increase spacing between links */
+    margin-right: 15px;
+}
+
+.custom-navbar .form-inline {
+    width: 100%;
+    max-width: 400px; /* Increase max width of search form */
+}
+
+.custom-navbar .form-control {
+    flex: 1;
+    height: calc(1.5em + 1rem + 2px); /* Increase height of input */
+    font-size: 1rem; /* Increase font size of input */
+}
+
+.custom-navbar .form-inline .btn {
+    flex-shrink: 0;
+    height: calc(1.5em + 1rem + 2px); /* Increase height of button */
+    font-size: 1rem; /* Increase font size of button */
+}
+
+.custom-navbar .navbar-brand i {
+    margin-right: 10px;
+}
+
