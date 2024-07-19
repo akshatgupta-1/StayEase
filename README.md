@@ -4,7 +4,7 @@ StayEase is a travel platform that allows users to explore and share their favou
 
 ## Live Project
 
-Check out the live project: [StayEase Live](https://stayease-h1gw.onrender.com)
+Check out the live project: [StayEase Live](https://stayease-h1gw.onrender.com/listings)
 
 ## Technologies Used
 
